@@ -20,6 +20,7 @@
                 "-g",
                 "${workspaceFolder}/main.cpp",  // Proje kök dizinindeki main.cpp dosyasını bulur.
                 "${workspaceFolder}/LinkedlistEntity.cpp",   // Proje kök dizinindeki LinkedlistEntity.cpp dosyasını bulur.
+                "${workspaceFolder}/Arrow.cpp",     // Proje kök dizinindeki Arrow.cpp dosyasını bulur.
                 "-I", "C:\\Users\\ertugrul\\Desktop\\libraries\\SFML-3.0.0\\include",
                 "-L", "C:\\Users\\ertugrul\\Desktop\\libraries\\SFML-3.0.0\\lib",
                 "-lsfml-graphics",

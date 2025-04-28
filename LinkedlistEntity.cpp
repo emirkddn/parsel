@@ -3,24 +3,19 @@
 
 using namespace std;
 
-LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window){  
+LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window): font(), address(font, "0x1234", 14), data(font, "", 42) {  
     
     if (!font.openFromFile("arial.ttf")) {
-        std::cout << "FONT ERROR" << std::endl;
+
     }
 
-    address.setFont(font);
-    address.setString("0x1234");
-    address.setCharacterSize(14);
     address.setFillColor(sf::Color::White);
-
-    data.setFont(font);
-    data.setString("10");
-    data.setCharacterSize(14);
     data.setFillColor(sf::Color::White);
+
+    data.setString("10");
     
     rectangleMain.setSize(sf::Vector2f(100.f, 100.f));
-    rectangleMain.setFillColor(sf::Color(100, 250, 50));
+    rectangleMain.setFillColor(sf::Color(100, 200, 50));
 
     rectangleAdd.setSize(sf::Vector2f(100.f,30.f));
     rectangleAdd.setFillColor(sf::Color(100, 150, 50));
@@ -36,7 +31,9 @@ LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window){
     float posXadd = (windowSize.x - rectangleAdd.getSize().x) / 2.f;
     float posYadd = (windowSize.y - rectangleAdd.getSize().y) / 2.f - 40.f;
     rectangleAdd.setPosition(sf::Vector2f(posXadd, posYadd));
-    address.setPosition(sf::Vector2f(posXadd, posYadd));
+    address.setPosition(sf::Vector2f(posXadd+25.f, posYadd+5.f));
+
+    data.setPosition(sf::Vector2f(posXmain+25.f ,posYmain+30.f));
     
 }
 
