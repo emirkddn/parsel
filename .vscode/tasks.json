@@ -13,22 +13,23 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
+            "label": "C/C++: Build All Files",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${workspaceFolder}/main.cpp",  // Proje kök dizinindeki main.cpp dosyasını bulur.
+                "${workspaceFolder}/LinkedlistEntity.cpp",   // Proje kök dizinindeki LinkedlistEntity.cpp dosyasını bulur.
                 "-I", "C:\\Users\\ertugrul\\Desktop\\libraries\\SFML-3.0.0\\include",
                 "-L", "C:\\Users\\ertugrul\\Desktop\\libraries\\SFML-3.0.0\\lib",
                 "-lsfml-graphics",
                 "-lsfml-window",
                 "-lsfml-system",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/main.exe"   // Derlenmiş .exe dosyasını proje kök dizinine çıkarır.
             ],
             "options": {
-                "cwd": "C:\\msys64\\ucrt64\\bin"
+                "cwd": "${workspaceFolder}"  // Derleme işlemi proje kök dizininde yapılır.
             },
             "problemMatcher": [
                 "$gcc"
