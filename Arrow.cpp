@@ -16,8 +16,8 @@ Arrow::Arrow(sf::RenderWindow& window) {
     float posXmain = (windowSize.x - rectangle.getSize().x) / 2.f;
     float posYmain = (windowSize.y - rectangle.getSize().y) / 2.f;
 
-    rectangle.setPosition(sf::Vector2f(posXmain + 110.f, posYmain));
-    triangle.setPosition(sf::Vector2f(posXmain + 160.f, posYmain - 3.f));
+    rectangle.setPosition(sf::Vector2f(posXmain + 90.f, posYmain));
+    triangle.setPosition(sf::Vector2f(posXmain + 140.f, posYmain - 3.f));
 
 }
 
