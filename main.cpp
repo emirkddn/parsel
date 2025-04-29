@@ -6,6 +6,7 @@
 class Node {
 public:
     Node(int value) : data(value), next(nullptr) {}
+    Node(){data=0;next=nullptr;}
     
     int data;
     Node* next;
@@ -14,6 +15,7 @@ public:
 class Linkedlist {
 public:
     Node* head;
+    Linkedlist():head(nullptr){}
     
     void insert(int value) {
         Node* newNode = new Node(value);
