@@ -3,7 +3,7 @@
 
 using namespace std;
 
-LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window): font(), address(font, "0x1234", 14), data(font, "", 42) {  
+LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window): font(), address(font, "0x1234", 12), data(font, "", 36) {  
     
     if (!font.openFromFile("arial.ttf")) {
 
@@ -14,26 +14,28 @@ LinkedlistEntity::LinkedlistEntity(sf::RenderWindow& window): font(), address(fo
 
     data.setString("10");
     
-    rectangleMain.setSize(sf::Vector2f(100.f, 100.f));
+    rectangleMain.setSize(sf::Vector2f(70.f, 70.f));
     rectangleMain.setFillColor(sf::Color(100, 200, 50));
 
-    rectangleAdd.setSize(sf::Vector2f(100.f,30.f));
+    rectangleAdd.setSize(sf::Vector2f(70.f,20.f));
     rectangleAdd.setFillColor(sf::Color(100, 150, 50));
     
     sf::Vector2u windowSize = window.getSize();
     
     //rectangleMain
-    float posXmain = (windowSize.x - rectangleMain.getSize().x) / 2.f;
+    //float posXmain = (windowSize.x - rectangleMain.getSize().x) / 2.f;
+    float posXmain = 20.f;
     float posYmain = (windowSize.y - rectangleMain.getSize().y) / 2.f;
     rectangleMain.setPosition(sf::Vector2f(posXmain, posYmain));
 
     //rectangleAdd
-    float posXadd = (windowSize.x - rectangleAdd.getSize().x) / 2.f;
+    //float posXadd = (windowSize.x - rectangleAdd.getSize().x) / 2.f;
+    float posXadd = 20.f;
     float posYadd = (windowSize.y - rectangleAdd.getSize().y) / 2.f - 40.f;
     rectangleAdd.setPosition(sf::Vector2f(posXadd, posYadd));
-    address.setPosition(sf::Vector2f(posXadd+25.f, posYadd+5.f));
+    address.setPosition(sf::Vector2f(posXadd+10.f, posYadd+3.f));
 
-    data.setPosition(sf::Vector2f(posXmain+25.f ,posYmain+30.f));
+    data.setPosition(sf::Vector2f(posXmain+13.f ,posYmain+10.f));
     
 }
 

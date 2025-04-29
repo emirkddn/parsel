@@ -13,11 +13,12 @@ Arrow::Arrow(sf::RenderWindow& window) {
 
     sf::Vector2u windowSize = window.getSize();
 
-    float posXmain = (windowSize.x - rectangle.getSize().x) / 2.f;
+    //float posXmain = (windowSize.x - rectangle.getSize().x) / 2.f;
+    float posXmain = 95.f;
     float posYmain = (windowSize.y - rectangle.getSize().y) / 2.f;
 
-    rectangle.setPosition(sf::Vector2f(posXmain + 90.f, posYmain));
-    triangle.setPosition(sf::Vector2f(posXmain + 140.f, posYmain - 3.f));
+    rectangle.setPosition(sf::Vector2f(posXmain, posYmain));
+    triangle.setPosition(sf::Vector2f(posXmain + 50.f, posYmain - 3.f));
 
 }
 
