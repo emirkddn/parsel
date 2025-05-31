@@ -131,8 +131,11 @@ int main() {
     list.insert(20);
     list.insert(30);
     list.insert(40);
-
+    list.insert(50);
+    list.insert(60);
     
     list.parsel();
 
 }
+
+
